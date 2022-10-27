@@ -13,7 +13,9 @@ class _AppState extends State<App> {
     return MaterialApp(
       home: Scaffold(
         body: Column(
-          children: [FirstScreenBody()],
+          children: [
+            FirstScreenBody(),
+          ],
         ),
       ),
     );
@@ -32,18 +34,35 @@ class FirstScreenBody extends StatelessWidget {
         color: const Color.fromRGBO(148, 107, 236, 1),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              "САКТА",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 55,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.normal,
-                letterSpacing: 20,
+          children: [
+            Container(
+              width: 353.0,
+              height: 341.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.elliptical(353, 341)),
+                border: Border.all(
+                  color: Color.fromRGBO(161, 121, 244, 0.5),
+                  width: 25.0,
+                ),
               ),
-            )
+              child: textCenter(),
+            ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Center textCenter() {
+    return const Center(
+      child: Text(
+        "САКТА",
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 55,
+          fontFamily: 'Montserrat',
+          fontWeight: FontWeight.normal,
+          letterSpacing: 20,
         ),
       ),
     );
