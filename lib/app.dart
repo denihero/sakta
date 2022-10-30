@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class App extends StatefulWidget {
@@ -38,9 +40,10 @@ class FirstScreenWallBody extends StatelessWidget {
             SizedBox(
               height: 300,
               child: Column(
-                children: [
+                children: const [
                   Expanded(child: TextWidget()),
                   EnterPhoneNumberButtonWidget(),
+                  SizedBox(height: 20),
                   NextButtonWidget(),
                 ],
               ),
@@ -60,18 +63,24 @@ class NextButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(10.0),
-      padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 100.0),
-      decoration: const BoxDecoration(
-          color: Color.fromRGBO(255, 69, 29, 1),
-          borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      child: const Text(
-        'Далее',
-        style: TextStyle(
-            color: Colors.white,
-            fontSize: 14,
-            fontFamily: 'Montserrat',
-            fontWeight: FontWeight.normal),
+      child: FlatButton(
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+            side: const BorderSide(
+              color: Color.fromRGBO(255, 69, 29, 1),
+            )),
+        padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 100.0),
+        color: const Color.fromRGBO(255, 69, 29, 1),
+        child: const Text(
+          'Далее',
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: 14,
+              fontFamily: 'Montserrat',
+              fontWeight: FontWeight.normal),
+        ),
+        onPressed: () {},
       ),
     );
   }
@@ -85,20 +94,23 @@ class EnterPhoneNumberButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      width: 250,
-      margin: const EdgeInsets.all(20.0),
-      // padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.white),
-          borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      child: TextField(
-        textAlign: TextAlign.center,
-        decoration: InputDecoration(
-          border: InputBorder.none,
-          hintText: "Введите номер телефона",
-      hintStyle: TextStyle(color: Colors.white, fontFamily:'Montserrat' )
+      child: FlatButton(
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+            side: const BorderSide(color: Colors.white)
         ),
+        padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 30.0),
+        color: Colors.black.withOpacity(0.00),
+        child: const Text(
+          'Введите номер телефона',
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: 14,
+              fontFamily: 'Montserrat',
+              fontWeight: FontWeight.normal),
+        ),
+        onPressed: () {},
       ),
     );
   }
@@ -115,9 +127,9 @@ class CircleWallWidget extends StatelessWidget {
       width: 353.0,
       height: 341.0,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.elliptical(353, 341)),
+        borderRadius: const BorderRadius.all(Radius.elliptical(353, 341)),
         border: Border.all(
-          color: Color.fromRGBO(161, 121, 244, 0.5),
+          color: const Color.fromRGBO(161, 121, 244, 0.5),
           width: 25.0,
         ),
       ),
