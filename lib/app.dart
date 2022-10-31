@@ -1,6 +1,8 @@
 import 'dart:html';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
@@ -94,24 +96,37 @@ class EnterPhoneNumberButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: FlatButton(
-        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
-            side: const BorderSide(color: Colors.white)
+      child: const SizedBox(
+        // <-- SEE HERE
+        width: 230,
+        height: 50,
+        child: TextField(
+          /*inputFormatters:[
+            FilteringTextInputFormatter.allow(RegExp('[0-9]')),
+          ],*/
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white),
+            cursorColor: Colors.white,
+          decoration: InputDecoration(
+            labelText: 'Введите номер телефона',
+            labelStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontFamily: 'Montserrat',
+                fontWeight: FontWeight.normal),
+            enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.white),
+                borderRadius: BorderRadius.all(Radius.circular(10))),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
+              borderRadius: BorderRadius.all(Radius.circular(10))),
+          counter: Offstage(),
+          ),
+          maxLength: 4,
+
         ),
-        padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 30.0),
-        color: Colors.black.withOpacity(0.00),
-        child: const Text(
-          'Введите номер телефона',
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 14,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.normal),
-        ),
-        onPressed: () {},
       ),
+
     );
   }
 }
