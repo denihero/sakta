@@ -57,6 +57,7 @@ class FirstScreenWallBody extends StatelessWidget {
                     children: [
                       Expanded(child: TextWidget()),
                       EnterPhoneNumberButtonWidget(),
+                      // EnterPhoneNumberPinWidget(),
                       SizedBox(height: 20),
                       NextButtonWidget(),
                     ],

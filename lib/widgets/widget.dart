@@ -1,5 +1,6 @@
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:flutter/material.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 
 class NextButtonWidget extends StatelessWidget {
   const NextButtonWidget({
@@ -73,6 +74,44 @@ class EnterPhoneNumberButtonWidget extends StatelessWidget {
   }
 }
 
+/// package: для ввода смс кода. Нужно адаптировать под процесс работы ///
+
+class EnterPhoneNumberPinWidget extends StatelessWidget {
+  const EnterPhoneNumberPinWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      // <-- SEE HERE
+      width: 100,
+      height: 50,
+      child: PinCodeTextField(
+        textStyle: const TextStyle(
+            color: Colors.white,
+            fontSize: 14,
+            fontFamily: 'Montserrat',
+            fontWeight: FontWeight.normal
+        ),
+        onChanged: (value) {
+          print(value);
+        },
+        pinTheme: PinTheme(
+          shape: PinCodeFieldShape.box,
+          borderWidth: 0.5,
+          fieldHeight: 20,
+          fieldWidth: 20,
+          inactiveColor: Colors.white,
+          inactiveFillColor: Colors.white,
+        ),
+        length: 4,
+        appContext: context,
+      ),
+    );
+  }
+}
+
+
+
 class TextWidget extends StatelessWidget {
   const TextWidget({
     Key? key,
@@ -116,6 +155,7 @@ class CircleWallWidget extends StatelessWidget {
     );
   }
 }
+
 class CircleWallWidgetSecond extends StatelessWidget {
   const CircleWallWidgetSecond({
     Key? key,
@@ -137,6 +177,7 @@ class CircleWallWidgetSecond extends StatelessWidget {
     );
   }
 }
+
 class CircleWallWidgetThird extends StatelessWidget {
   const CircleWallWidgetThird({
     Key? key,
