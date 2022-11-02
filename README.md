@@ -1,7 +1,5 @@
 # sakta
 
-# sakta
-
 Navigator system, system with maps. Login with phone number and SMS system.
 
 
