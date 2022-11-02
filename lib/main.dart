@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'app.dart';
+import 'package:sakta/screens/map_screen.dart';
+import 'widgets/app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return App();
+    return MapScreen();
+    // App() ;
   }
 }

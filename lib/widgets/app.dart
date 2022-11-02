@@ -47,9 +47,9 @@ class FirstScreenWallBody extends StatelessWidget {
                   Center(
                     child: CircleWallWidget(),
                   ),
-                  Center(
+                  /*Center(
                     child: CircleWallWidgetThird(),
-                  ),
+                  ),*/
                   Center(
                     child: CircleWallWidgetSecond(),
                   ),

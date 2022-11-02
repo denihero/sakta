@@ -147,8 +147,8 @@ class CircleWallWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.elliptical(350, 350)),
         border: Border.all(
-          color: const Color.fromRGBO(161, 121, 244, 0.8),
-          width: 25.0,
+          color: const Color.fromRGBO(161, 121, 244, 0.5),
+          width: 40.0,
         ),
       ),
       child: null,
@@ -178,6 +178,7 @@ class CircleWallWidgetSecond extends StatelessWidget {
   }
 }
 
+/*
 class CircleWallWidgetThird extends StatelessWidget {
   const CircleWallWidgetThird({
     Key? key,
@@ -191,7 +192,7 @@ class CircleWallWidgetThird extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.elliptical(350, 350)),
         border: Border.all(
-          color: const Color.fromRGBO(161, 121, 244, 0.8),
+          color: const Color.fromRGBO(161, 121, 244, 0.5),
           width: 25.0,
         ),
       ),
@@ -199,3 +200,4 @@ class CircleWallWidgetThird extends StatelessWidget {
     );
   }
 }
+*/
