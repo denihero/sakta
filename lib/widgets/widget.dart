@@ -177,27 +177,3 @@ class CircleWallWidgetSecond extends StatelessWidget {
     );
   }
 }
-
-/*
-class CircleWallWidgetThird extends StatelessWidget {
-  const CircleWallWidgetThird({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 500.0,
-      height: 500.0,
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.all(Radius.elliptical(350, 350)),
-        border: Border.all(
-          color: const Color.fromRGBO(161, 121, 244, 0.5),
-          width: 25.0,
-        ),
-      ),
-      child: null,
-    );
-  }
-}
-*/
