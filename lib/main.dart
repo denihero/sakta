@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sakta/screens/map_screen.dart';
 import 'package:sakta/screens/profile_screen.dart';
+import 'package:sakta/screens/profile_settings_screen.dart';
 import 'widgets/app.dart';
 
 void main() {
@@ -12,8 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ProfileScreen();
+    return
+      ProfileSettingsScreen();
+    //ProfileScreen();
       //MapScreen();
-    // App() ;
+    //App() ;
   }
 }

@@ -3,30 +3,39 @@ import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class NextButtonWidget extends StatelessWidget {
+
+  final double fontSize;
+  final double height;
+  final double width;
+  final double borderRadius;
+
   const NextButtonWidget({
-    Key? key,
+    Key? key, required this.fontSize, required this.height, required this.width, required this.borderRadius,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          side: const BorderSide(
-            color: Color.fromRGBO(255, 69, 29, 1),
-          )),
-      padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 100.0),
-      color: const Color.fromRGBO(255, 69, 29, 1),
-      child: const Text(
-        'Далее',
-        style: TextStyle(
-            color: Colors.white,
-            fontSize: 14,
-            fontFamily: 'Montserrat',
-            fontWeight: FontWeight.normal),
+    return SizedBox(
+      height: height,
+      width: width,
+      child: FlatButton(
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius),
+            side: const BorderSide(
+              color: Color.fromRGBO(255, 69, 29, 1),
+            )),
+        color: const Color.fromRGBO(255, 69, 29, 1),
+        child: Text(
+          'Далее',
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: fontSize,
+              fontFamily: 'Montserrat',
+              fontWeight: FontWeight.normal),
+        ),
+        onPressed: () {},
       ),
-      onPressed: () {},
     );
   }
 }
@@ -124,7 +133,7 @@ class TextWidget extends StatelessWidget {
         "САКТА",
         style: TextStyle(
           color: Colors.white,
-          fontSize: 55,
+          fontSize: 50,
           fontFamily: 'Montserrat',
           fontWeight: FontWeight.normal,
           letterSpacing: 20,

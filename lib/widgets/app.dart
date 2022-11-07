@@ -44,22 +44,38 @@ class FirstScreenWallBody extends StatelessWidget {
               height: 500,
               child: Stack(
                 children: [
-                  Center(
-                    child: CircleWallWidget(),
-                  ),
-                  /*Center(
-                    child: CircleWallWidgetThird(),
-                  ),*/
-                  Center(
-                    child: CircleWallWidgetSecond(),
-                  ),
+                  const Center(
+                      child:
+                          Image(image: AssetImage('assets/Ellipse 4 (1).png'))),
+                  const Center(
+                      child:
+                          Image(image: AssetImage('assets/Ellipse 6 (3).png'))),
+                  const Center(
+                      child: Image(image: AssetImage('assets/Ellipse 3.png'))),
                   Column(
                     children: [
-                      Expanded(child: TextWidget()),
-                      EnterPhoneNumberButtonWidget(),
+                      const Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 120),
+                          child: TextWidget(),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(),
+                        child: Column(
+                          children: [
+                            EnterPhoneNumberButtonWidget(),
+                            const SizedBox(height: 20),
+                            const NextButtonWidget(
+                              fontSize: 14,
+                              height: 50,
+                              width: 230,
+                              borderRadius: 10,
+                            ),
+                          ],
+                        ),
+                      ),
                       // EnterPhoneNumberPinWidget(),
-                      SizedBox(height: 20),
-                      NextButtonWidget(),
                     ],
                   ),
                 ],
