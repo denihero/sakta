@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class MapScreen extends StatelessWidget {
+class MapScreen extends StatefulWidget {
+  @override
+  State<MapScreen> createState() => _MapScreenState();
+}
+
+class _MapScreenState extends State<MapScreen> {
   static const double _defaultLat = 42.857510;
   static const double _defaultLong = 74.609613;
 
   static const CameraPosition _defaultLocation =
       CameraPosition(target: LatLng(_defaultLat, _defaultLong), zoom: 15);
+
+  ///AIzaSyBbqNBURYXL0FhB3-jPRD84FGW2Yc3F23k///
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +22,15 @@ class MapScreen extends StatelessWidget {
       home: Scaffold(
         body: Stack(
           children: [
-            GoogleMap(initialCameraPosition: _defaultLocation),
+            SizedBox(
+              height: 800,
+              width: 400,
+              child: GoogleMap(
+                myLocationButtonEnabled: false,
+                zoomControlsEnabled: false ,
+                initialCameraPosition: _defaultLocation,
+              ),
+            ),
             Positioned(
               right: 20,
               top: 40,
@@ -73,7 +88,7 @@ class NavigatorMapWidget4 extends StatelessWidget {
           ),
           child: Center(
             child: TextButton(
-              onPressed: (){},
+              onPressed: () {},
               child: const Text("SOS",
                   style: TextStyle(
                     fontSize: 20,
