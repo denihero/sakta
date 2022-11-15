@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:sakta/widgets/widget.dart';
+import 'package:sakta/widgets/registration_widget_screen.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class _AppState extends State<App> {
       home: Scaffold(
         body: Center(
           child: Column(
-            children: [
+            children: const [
               FirstScreenWallBody(),
             ],
           ),
